@@ -11,9 +11,9 @@
   - Потоков: **4**
   
 #### Тест кейсы
-- [input1](https://github.com/unvir/parallel-programming-course/blob/lab1/input.txt) умножение матриц 2*3 и 3*2 
-- [input2](https://github.com/unvir/parallel-programming-course/blob/lab1/input2.txt) умножение матриц 20*40 и 40*30
-- [input3](https://github.com/unvir/parallel-programming-course/blob/lab1/input3.txt) умножение матриц 2*60 и 60*2
+- [input1](https://github.com/unvir/parallel-programming-course/blob/lab1/input.txt) умножение матриц 2x3 и 3x2 
+- [input2](https://github.com/unvir/parallel-programming-course/blob/lab1/input2.txt) умножение матриц 20x40 и 40x30
+- [input3](https://github.com/unvir/parallel-programming-course/blob/lab1/input3.txt) умножение матриц 2x60 и 60x2
 
 #### Результаты
 [Результат]() выполнения [runner.sh](https://github.com/unvir/parallel-programming-course/blob/lab1/runner.sh)
