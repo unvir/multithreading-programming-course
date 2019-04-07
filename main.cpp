@@ -103,7 +103,7 @@ public:
 
 int main() {
     const int MATRIX_MULTIPLY_TICK = 100000;
-    ifstream fin("input2.txt");
+    ifstream fin("input3.txt");
     ofstream fout("output.txt");
     Matrix m1(fin); 
     Matrix m2(fin);
