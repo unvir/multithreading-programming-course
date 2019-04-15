@@ -85,7 +85,7 @@ public:
 
         int ij, i, j;
 
-        #pragma omp parallel for shared(first, second, result) private(ij, i, j) schedule(dynamic, 5)
+        #pragma omp parallel for shared(first, second, result) private(ij, i, j) schedule(dynamic, 5) reduction(+:result)
         for (ij = 0; ij < res_rows * res_cols; ij++)
         {
             i = ij / res_cols;
