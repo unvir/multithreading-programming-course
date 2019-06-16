@@ -85,7 +85,7 @@ public:
 
         int ij, i, j;
 
-        #pragma omp parallel for shared(first, second, result) private(ij, i, j) schedule(dynamic, 5) reduction(+:result)
+        #pragma omp parallel for shared(first, second, result) private(ij, i, j) schedule(dynamic, 100)
         for (ij = 0; ij < res_rows * res_cols; ij++)
         {
             i = ij / res_cols;
@@ -102,8 +102,8 @@ public:
 };
 
 int main() {
-    const int MATRIX_MULTIPLY_TICK = 100000;
-    ifstream fin("input3.txt");
+    const int MATRIX_MULTIPLY_TICK = 50;
+    ifstream fin("input2.txt");
     ofstream fout("output.txt");
     Matrix m1(fin); 
     Matrix m2(fin);
