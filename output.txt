@@ -1,0 +1,9 @@
+Length: 20000. Threads: 1. Time: 3.69121
+Length: 20000. Threads: 2. Time: 3.68604
+Length: 20000. Threads: 3. Time: 3.64034
+Length: 20000. Threads: 4. Time: 3.74168
+Length: 20000. Threads: 5. Time: 3.68785
+Length: 20000. Threads: 6. Time: 3.69115
+Length: 20000. Threads: 7. Time: 3.8454
+Length: 20000. Threads: 8. Time: 4.01595
+
