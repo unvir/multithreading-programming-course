@@ -29,7 +29,7 @@ long* dijkstra_omp(int** matrix, int length, int start) {
     long min = INF;
 
 
-    #pragma omp parallel for shared(distances, visited) schedule(dynamic, 400000000/omp_get_num_threads())
+    #pragma omp parallel for shared(distances, visited) schedule(static)
     for (int i = 0; i < length; i++) {
         distances[i] = INF;
         visited[i] = false;
@@ -45,7 +45,7 @@ long* dijkstra_omp(int** matrix, int length, int start) {
             mins[j] = INF;
             minNumbers[j] = -1;
         }
-        #pragma omp parallel for shared(matrix, distances, visited, mins, minNumbers) firstprivate(length) private(cur, j) schedule(dynamic, 400000000/omp_get_num_threads())
+        #pragma omp parallel for shared(matrix, distances, visited, mins, minNumbers) firstprivate(length) private(cur, j) schedule(static)
         for (j = 0; j < length; j++) {
             cur = minNumbers[omp_get_thread_num()];
             if (!visited[j] && (cur == -1 || distances[j] < distances[cur])) {
@@ -66,7 +66,7 @@ long* dijkstra_omp(int** matrix, int length, int start) {
             break;
         visited[cur] = true;
 
-        #pragma omp parallel for firstprivate(cur, length) private(j) shared(matrix, distances) schedule(dynamic, 400000000/omp_get_num_threads())
+        #pragma omp parallel for firstprivate(cur, length) private(j) shared(matrix, distances) schedule(static)
         for(j = 0; j < length; j++) {
             if (distances[cur] + matrix[cur][j] < distances[j]) {
                 distances[j] = distances[cur] + matrix[cur][j];
